@@ -5,6 +5,8 @@ class Vehicle {
         this.style = style
         this.year = year
         this.color = color
+        this.fuel = fuel
+        this.started = false 
 
         }
 
@@ -26,6 +28,16 @@ class Vehicle {
 
         addOwnerInfo(ownerInfo){
             return this.make + ' ' + "owner's occupation is " + ownerInfo; 
+        }
+
+        start() {
+            if (this.fuel > 0) {
+                return this.started = true;
+                console.log("engine started...!!!");
+            } else {
+                return this.started = false;
+                console.log("engine cannot start...");
+            }
         }
         
     }
